@@ -46,10 +46,21 @@ def select_column(who_plays):
             print(check_range(column_select))
             continue
 
+def empty_print(game_field, row, column):
+    if game_field[row][column] == "":
+        return " "
+    else:
+        return game_field[row][column]
+    
 
 def print_game_field(game_field):
-    for i in game_field:
-                print(i)
+
+    print(" "  + empty_print(game_field, 0, 0) + "|" + empty_print(game_field, 0, 1) + "|" + empty_print(game_field, 0, 2))
+    print("-------")
+    print(" "  + empty_print(game_field, 1, 0) + "|" + empty_print(game_field, 1, 1) + "|" + empty_print(game_field, 1, 2))
+    print("-------")
+    print(" "  + empty_print(game_field, 2, 0) + "|" + empty_print(game_field, 2, 1) + "|" + empty_print(game_field, 2, 2))
+
 
 
 def check_if_empty(game_field, row_select, column_select):
@@ -183,7 +194,7 @@ def to_input(game_field, input_value):
             game_field[row_select][column_select] = input_value
             break
         else:
-            print("Lūdzu izvēlieties citu vietu, šī ir aizņemta")
+            print("Please select an another postition, this one is taken")
             continue
     
 

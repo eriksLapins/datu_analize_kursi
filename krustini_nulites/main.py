@@ -1,6 +1,6 @@
 import random
 from logic import to_input
-
+from logic import print_game_field as print_field
 
 
 
@@ -14,8 +14,7 @@ def noughts_crosses(who_starts):
             field = to_input(field, "O")
             try:
                 if field != "draw":
-                    for i in field:
-                        print(i)
+                    print_field(field)
                 elif field == "draw":
                     print("It's a draw")
                     break
@@ -31,8 +30,7 @@ def noughts_crosses(who_starts):
             field = to_input(field, "X")
             try:
                 if field != "draw":
-                    for i in field:
-                        print(i)
+                    print_field(field)
                 elif field == "draw":
                     print("It's a draw")
                     break
