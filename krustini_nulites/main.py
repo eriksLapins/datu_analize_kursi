@@ -42,8 +42,7 @@ def noughts_crosses(who_starts):
                     print("It's a draw")
                     break
 
-# row_select = input("please select the row where you want to input")
-# column_select = input("please select the column where you want to input")
+
 if __name__ == "__main__":
     who_starts = random.choice(["X", "O"])
     print(f'{who_starts} begins the game!')

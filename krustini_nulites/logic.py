@@ -17,7 +17,7 @@ def select_row(who_plays):
     """
     while True:
         try:
-            row_select = int(input(f"{who_plays} selects the row where to input (1 - 3)"))-1
+            row_select = int(input(f"{who_plays} selects the row where to input (1 - 3)\n"))-1
         except ValueError:
             print("No number or nothing given")
             continue
@@ -35,7 +35,7 @@ def select_column(who_plays):
     """
     while True:
         try:
-            column_select = int(input(f"{who_plays} selects the column where to input (1 - 3)"))-1
+            column_select = int(input(f"{who_plays} selects the column where to input (1 - 3)\n"))-1
         except ValueError:
             print("No number or nothing given")
             continue
@@ -46,6 +46,7 @@ def select_column(who_plays):
             print(check_range(column_select))
             continue
 
+
 def empty_print(game_field, row, column):
     if game_field[row][column] == "":
         return " "
@@ -54,13 +55,13 @@ def empty_print(game_field, row, column):
     
 
 def print_game_field(game_field):
-
+    print("")
     print(" "  + empty_print(game_field, 0, 0) + "|" + empty_print(game_field, 0, 1) + "|" + empty_print(game_field, 0, 2))
     print("-------")
     print(" "  + empty_print(game_field, 1, 0) + "|" + empty_print(game_field, 1, 1) + "|" + empty_print(game_field, 1, 2))
     print("-------")
     print(" "  + empty_print(game_field, 2, 0) + "|" + empty_print(game_field, 2, 1) + "|" + empty_print(game_field, 2, 2))
-
+    print("")
 
 
 def check_if_empty(game_field, row_select, column_select):
